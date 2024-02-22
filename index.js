@@ -17,6 +17,10 @@ const PORT = process.env.PORT || 3000;
 app.use("/task", taskRoutes);
 app.use("/user", userRoutes);
 
+app.get("/", (req, res) => {
+  res.send("Simple Task management App");
+});
+
 // Start the server
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
